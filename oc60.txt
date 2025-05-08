@@ -1,0 +1,144 @@
+Trouble Shooting Guide:
+The following guide includes basic instructions for troubleshooting the OC60-DI. Always request pics/videos from customers. When providing instructions/assistance to customers, remind them to use caution and ground all components before touching when troubleshooting.
+
+REQUIRED INFORMATION
+Required information from customer up front includes model #, serial #, software version, detailed description of symptoms, post-test pop-up message if applicable, test parameters and setup when symptoms occur, description of 	recent tests leading up to the failure, and request pics/videos.
+Serial #: Can be found on the label on the side of the case, or on the display in Settings > About.
+Software Version: Can be found on the display in Settings > About
+Description of Symptoms: describe failure mode; is it repetitive in a specific scenario, random, or once
+Post-Test Message: at the end of every test, successfully completed or not, a pop-up window shows on the display with a title indicating the reason that the test ended.
+Test Parameters: Target Voltage, Ramp-Rate, Dwell, Elapsed Time, Wait Time, Test Standard
+Test Setup: What was being tested? Pics? Max Voltage reached?
+Recent Tests: Describe above for any recent tests leading up to the failure	
+
+“Lid Opened” Message
+
+Message Reason: Controller does not detect that the safety lid is closed
+
+Possible Causes: 
+•	Lid is open, not aligned with magnetic switch
+•	Magnetic switch broken
+•	Interlock cable disconnected/broken from controller PCB
+•	Controller PCB is bad
+
+Troubleshooting Sequence:
+1.	Check if the lid is fully closed and the lid-magnet is aligned over the magnetic interlock switch. If not, align.
+2.	Does the magnetic switch, or it’s wires, look damaged? If so, replace HH145883.
+3.	Further troubleshooting will require opening the unit and should only be done with approval. Remove the left side panel to access the electronics/cables.
+4.	Is the magnetic switch cable assembly securely plugged into the controller PCB and undamaged. If not, re-secure or replace HH145883.
+5.	Remove the lid from the rails and try to freely align the lid-magnet with the magnetic-switch. Does it ever activate? If so, need to re-align the magnetic switch and lid. Loosen the screws slightly that are mounting the magnetic switch and re-align with lid.
+6.	If all above fails, must be a bad controller PCB
+
+“Communication Failure” Message
+
+Message Reason: Control software is not getting a response from the secondary microcontroller, which controls ramping up voltage.
+
+Possible Causes: 
+•	Electrical noise cause miscommunication
+•	Bad System-on-Module
+•	Bad Microcontroller
+
+Troubleshooting Sequence:
+1.	Restart unit and try again. Still getting message? If not, some electrical noise must have caused some momentary miscommunication.
+2.	Charge the batteries if using on battery. Try again.
+3.	Replace controller PCB
+
+	
+5.0 “Contact Hipotronics” Message
+
+Message Reason: Two overcurrents detected in a row on the primaries side of the transformer
+
+Possible Causes: 
+•	Direct short in the test chamber (electrodes touching/shorted)
+•	Transformer connections loose
+•	Bad HV Transformer
+
+Troubleshooting Sequence:
+1.	Verify the oil cup electrodes are not touching and there is not a direct short. Or remove oil cup altogether and try again.
+2.	Further troubleshooting will require opening the unit and should only be done with approval. 
+3.	Remove the right side panel of the unit and check the connections going to the HV transformer. Are any of them loose, disconnected, or conductors touching the chassis? If so, re-connect properly.
+4.	If all looks good, must be a bad HV transformer (shorted internally).
+
+
+6.0 Touchscreen Inoperable
+
+Possible Causes: 
+•	Touch disabled in settings
+•	Touchscreen cable unplugged/loose/pinched
+•	LCD is bad
+•	Controller PCB is bad
+
+Troubleshooting Sequence:
+1.	Further troubleshooting will require opening the unit and should only be done with approval. Remove the left side panel of the unit.
+2.	Is the 4-pin ribbon touchscreen cable plugged in and fully seated in the connector on the LCD-PCB? If not, reconnect securely.
+3.	Is the large ribbon cable fully seated between the controller PCB and the LCD-PCB? If not, reconnect properly. If so, replace display
+
+
+7.0 No Output Voltage
+
+Possible Causes: 
+•	Too Low of Battery Voltage
+•	Loose Connections
+•	Corrupted Microcontroller
+•	Controller PCB is bad
+•	Transformer is bad
+•	Overcurrent board is bad
+
+Troubleshooting Sequence:
+1.	Is there a battery icon in the upper right corner of the display? If not, power off the unit, remove the power cable and re-insert. Let the unit charge for 30minutes before powering on and trying again. Battery voltage was too low to ramp up high voltage.
+2.	Further troubleshooting will require opening the unit and should only be done with approval. Remove the left side panel of the unit.
+3.	Are all blue and brown wires fully connected to the bottom of the controller PCB to the small overcurrent-PCB?
+4.	Microcontroller could have been corrupted. Get latest firmware from Hipotronics onto a USB, plug into unit, and press “Update PIC”. Once microcontroller has been updated, restart and try again.
+5.	While attempting to ramp up in a test, check to see if the controller PCB is outputting voltage on blue and brown wires, towards the bottom of the PCB. If not, it’s a bad controller PCB.
+6.	If so, check to see if the overcurrent-PCB and can-filter are outputting voltage to the transformer during ramping. If not, replace overcurrent PCB HH601017 and/or can-filter HH17215.
+7.	If so, check connections going into transformer. If not good, reconnect. If good, it’s a bad transformer HHT0862D2.
+
+8.0 Unit Won’t Boot / Power
+
+Possible Causes: 
+•	Batteries dead
+•	Loose connections
+•	LCD is bad
+•	LCD-PCB is bad
+•	Controller PCB is bad
+
+Troubleshooting Sequence:
+1.	Are the batteries depleted and not plugged into mains? Plug in power-cord, batteries are depleted and should be charged to full. If leaving power-cord in for several hours does not charge the batteries at all.
+2.	Further troubleshooting will require opening the unit and should only be done with approval. Remove the left side panel of the unit.
+3.	Check all cable connections; battery cables, power-supply cables, LCD ribbon cables. Are they secure?
+4.	Is the power supply outputting voltage to controller PCB? If not, replace power-supply, HH29327.
+5.	Are there any LEDs lit up on the controller PCB? If not, must be bad controller PCB,
+6.	If yes, could be bad LCD display that just isn’t showing the unit is on. Replace LCD display
+
+
+9.0	Batteries Won’t Charge / Dead
+
+Possible Causes: 
+•	Batteries were depleted for too long and died
+•	Batteries are old and won’t re-charge anymore
+•	Batteries overheated or shorted
+•	Loose cables
+•	Controller PCB is bad and won’t charge batteries
+
+Troubleshooting Sequence:
+1.	Have you tried charging the unit for an extended period of time? If not, plug in power-cord, and try again after 1hr.
+2.	Further troubleshooting will require opening the unit and should only be done with approval. Remove the left side panel of the unit.
+3.	Check all cable connections; battery cables, power-supply cables. Are they secure?
+4.	Using power-cord to power unit, do Red LEDs light up towards the bottom of the controller PCB? If not, the controller PCB is not trying to charge the batteries and needs replaced. If yes, replace the batteries, HH145882 (x2).
+
+
+
+10.0	Temp/Humidity Not Reading
+
+Possible Causes: 
+•	Loose cables
+•	Bad Temp/Humidity PCB
+•	Bad Controller PCB
+
+Troubleshooting Sequence:
+1.	Have you just restarted the unit? If not, restart to try to re-initialize the Temp/Humidity Sensor.
+2.	Further troubleshooting will require opening the unit and should only be done with approval. Remove the left side panel of the unit.
+3.	Check all cable connections; ethernet cable going to the temp/humidity-PCB. Are they secure?
+4.	Replace HH601007 Temp/Humidity Sensor PCB.
+5.	If that doesn’t work, replace controller PCB
+
