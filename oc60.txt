@@ -1,4 +1,4 @@
-Trouble Shooting Guide:
+OC60 Trouble Shooting Guide:
 The following guide includes basic instructions for troubleshooting the OC60-DI. Always request pics/videos from customers. When providing instructions/assistance to customers, remind them to use caution and ground all components before touching when troubleshooting.
 
 REQUIRED INFORMATION
